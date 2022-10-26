@@ -1,23 +1,23 @@
 import logo from './logo.svg';
+import React, { useState } from "react";
 import './App.css';
 
 function App() {
+  // button
+  // const [status, setStatus] = useState("Not Delivered");
+  // checkbox
+  const [checked, setChecked] = useState(false);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      {/* button */}
+      {/* <h1>The package is: {status}.</h1>
+      <button onClick={() => setStatus("Delivered")}>Deliver</button> */}
+      {/* checkbox */}
+      <input type="checkbox" 
+      value={checked}
+      onChange={() => setChecked((checked) => !checked)}
+      /><p>
+      {checked ? "checked" : "not checked"}</p>
     </div>
   );
 }
